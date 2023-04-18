@@ -27,4 +27,6 @@ accelerator:
     chain:
       - merge:
         - exclude: [ "**/*"]
+        - include: [ "src/main/java/com/example/demo/DemoApplication.yaml" ]
+          condition: "#componentType == 'controller'"
 
