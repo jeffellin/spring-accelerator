@@ -24,9 +24,8 @@ accelerator:
         - value: repository
           text: repository
   engine:
-    chain:
-      - merge:
-        - exclude: [ "**/*"]
-        - include: [ "src/main/java/com/example/demo/DemoApplication.yaml" ]
-          condition: "#componentType == 'controller'"
+    - merge:
+      - exclude: [ "**/*"]
+      - include: [ "src/main/java/com/example/demo/DemoApplication.yaml" ]
+        condition: "#componentType == 'controller'"
 
