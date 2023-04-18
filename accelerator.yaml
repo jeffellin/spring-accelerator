@@ -7,9 +7,14 @@ accelerator:
     - spring
   options:
     - name: projectName
-      label: Package name
+      label: class name
       inputType: text
       defaultValue: "GoodBar"
+      required: true
+    - name: includeTest
+      label: includeTest
+      inputType: text
+      defaultValue: "yes"
       required: true
     - name: pkgName
       label: Package name
