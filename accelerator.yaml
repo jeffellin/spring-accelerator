@@ -33,7 +33,6 @@ engine:
           pattern: com.example.demo.controller
           with: "#pkgName"
       - type: RewritePath
-        regex: src/main/java/com/example/demo/controller(.*)
-        rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #g1"
+        rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + DemoBot.java"
 
 
