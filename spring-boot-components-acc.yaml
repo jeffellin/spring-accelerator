@@ -1,0 +1,10 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: test-accelerator
+spec:
+  git:
+    url: https://github.com/jeffellin/spring-accelerator
+    ref:
+      branch: main
+    interval: 10s
