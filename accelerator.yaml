@@ -8,7 +8,7 @@ accelerator:
   options:
 
     - name: projectName
-      label: Name
+      label: TestName
       inputType: text
       defaultValue: myname
       required: true
