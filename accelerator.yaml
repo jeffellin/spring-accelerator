@@ -6,6 +6,12 @@ accelerator:
     - java
     - spring
   options:
+
+    - name: projectName
+      label: Name
+      inputType: text
+      defaultValue: myname
+      required: true
     - name: className
       label: class name
       inputType: text
