@@ -63,7 +63,7 @@ engine:
             with: "#className"
         - type: RewritePath
           regex: src/main/java/com/example/demo/entity(.*)
-          rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className"
+          rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className+'.class'"
 
 
 
