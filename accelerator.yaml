@@ -62,7 +62,7 @@ engine:
             pattern: BasicControllerTest
             with: "#className" + 'Test'
         - type: RewritePath
-          regex: src/main/java/com/example/demo/controller(.*)
+          regex: src/test/java/com/example/demo/controller(.*)
           rewriteTo: "'src/test/java/' + #pkgName.replace('.', '/') + '/' + #className+'Test.java'"
     - include: [ "src/main/java/com/example/demo/entity/BookEntity.java" ]
       condition: "#componentType == 'entity'"

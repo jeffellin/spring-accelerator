@@ -1,6 +1,6 @@
 {
   "className" : "GoodBar",
-  "componentType" : "entity",
+  "componentType" : "controller",
   "includeTest" : "yes",
   "pkgName" : "com.acmecorp",
   "projectName" : "test-accelerator"
