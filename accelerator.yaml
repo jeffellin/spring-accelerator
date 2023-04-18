@@ -26,5 +26,5 @@ accelerator:
   engine:
     chain:
       - merge:
-        - exclude: [ "*"]
+        - exclude: [ "**"]
         - include: src/main/java/com/example/demo/*.java
