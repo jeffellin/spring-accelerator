@@ -50,6 +50,20 @@ engine:
       - type: RewritePath
         regex: src/main/java/com/example/demo/controller(.*)
         rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className+'.java'"
+    - include: [ "src/test/java/com/example/demo/controller/BasicControllerTest.java" ]
+      condition: "#componentType == 'controller'"
+      chain:
+        - type: ReplaceText
+          regex:
+            pattern: com.example.demo.controller
+            with: "#pkgName"
+        - type: ReplaceText
+          regex:
+            pattern: BasicControllerTest
+            with: "#className" + 'Test'
+        - type: RewritePath
+          regex: src/main/java/com/example/demo/controller(.*)
+          rewriteTo: "'src/test/java/' + #pkgName.replace('.', '/') + '/' + #className+'Test.java'"
     - include: [ "src/main/java/com/example/demo/entity/BookEntity.java" ]
       condition: "#componentType == 'entity'"
       chain:
