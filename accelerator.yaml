@@ -50,7 +50,7 @@ engine:
       - type: RewritePath
         regex: src/main/java/com/example/demo/controller(.*)
         rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className"
-    - include: [ "src/main/java/com/example/demo/entity/BasicController.java" ]
+    - include: [ "src/main/java/com/example/demo/entity/BookEntity.java" ]
       condition: "#componentType == 'entity'"
       chain:
         - type: ReplaceText
