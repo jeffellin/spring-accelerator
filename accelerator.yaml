@@ -49,7 +49,7 @@ engine:
           with: "#className"
       - type: RewritePath
         regex: src/main/java/com/example/demo/controller(.*)
-        rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className+'.class'"
+        rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className+'.java'"
     - include: [ "src/main/java/com/example/demo/entity/BookEntity.java" ]
       condition: "#componentType == 'entity'"
       chain:
@@ -63,7 +63,7 @@ engine:
             with: "#className"
         - type: RewritePath
           regex: src/main/java/com/example/demo/entity(.*)
-          rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className+'.class'"
+          rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className+'.java'"
 
 
 
