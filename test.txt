@@ -1,0 +1,7 @@
+{
+  "className" : "GoodBar",
+  "componentType" : "entity",
+  "includeTest" : "yes",
+  "pkgName" : "com.acmecorp",
+  "projectName" : "test-accelerator"
+}
