@@ -6,6 +6,11 @@ accelerator:
     - java
     - spring
   options:
+    - name: projectName
+      label: Package name
+      inputType: text
+      defaultValue: "GoodBar"
+      required: true
     - name: pkgName
       label: Package name
       inputType: text
@@ -32,6 +37,10 @@ engine:
         regex:
           pattern: com.example.demo.controller
           with: "#pkgName"
+      - type: ReplaceText
+        regex:
+          pattern: BasicController
+          with: "#projectName"
       - type: RewritePath
         regex: src/main/java/com/example/demo/controller(.*)
         rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/DemoBot.java'"
