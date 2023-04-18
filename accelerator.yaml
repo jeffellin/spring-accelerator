@@ -26,5 +26,10 @@ accelerator:
 engine:
   merge:
     - exclude: [ "**/*" ]
-    - include: [ "LICENSE" ]
+    - include: [ "src/main/java/com/example/demo/controller/BasicController.java" ]
+      chain:
+        - type: RewritePath
+          regex: src/main/java/com/example/demo/controller(.*)
+          rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #g1"
+
 
