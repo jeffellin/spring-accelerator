@@ -28,12 +28,12 @@ engine:
     - exclude: [ "**/*" ]
     - include: [ "src/main/java/com/example/demo/controller/BasicController.java" ]
       chain:
-    - type: ReplaceText
-      regex:
-        pattern: com.example.demo.controller
-        with: "#pkgName"
-    - type: RewritePath
-      regex: src/main/java/com/example/demo/controller(.*)
-      rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #g1"
+      - type: ReplaceText
+        regex:
+          pattern: com.example.demo.controller
+          with: "#pkgName"
+      - type: RewritePath
+        regex: src/main/java/com/example/demo/controller(.*)
+        rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #g1"
 
 
