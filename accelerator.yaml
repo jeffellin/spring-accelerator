@@ -23,3 +23,7 @@ accelerator:
           text: entity
         - value: repository
           text: repository
+  engine:
+    chain:
+      - merge:
+        include: src/main/java/com/example/demo/*.java
