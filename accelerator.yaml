@@ -25,6 +25,6 @@ accelerator:
           text: repository
 engine:
   merge:
-    - include: [ "**/*" ]
-      exclude: [ "LICENSE" ]
+    - exclude: [ "**/*" ]
+    - include: [ "LICENSE" ]
 
