@@ -37,6 +37,7 @@ engine:
   merge:
     - exclude: [ "**/*" ]
     - include: [ "src/main/java/com/example/demo/controller/BasicController.java" ]
+      condition: "#componentType == 'controller'"
       chain:
       - type: ReplaceText
         regex:
@@ -49,5 +50,21 @@ engine:
       - type: RewritePath
         regex: src/main/java/com/example/demo/controller(.*)
         rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className"
+    - include: [ "src/main/java/com/example/demo/controller/BasicController.java" ]
+      condition: "#componentType == 'entity'"
+      chain:
+        - type: ReplaceText
+          regex:
+            pattern: com.example.demo.entity
+            with: "#pkgName"
+        - type: ReplaceText
+          regex:
+            pattern: BookEntity
+            with: "#className"
+        - type: RewritePath
+          regex: src/main/java/com/example/demo/entity(.*)
+          rewriteTo: "'src/main/java/' + #pkgName.replace('.', '/') + '/' + #className"
+
+
 
 
