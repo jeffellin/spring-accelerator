@@ -60,7 +60,7 @@ engine:
         - type: ReplaceText
           regex:
             pattern: BasicControllerTest
-            with: "#className" + 'Test'
+            with: "#className + 'Test'"
         - type: RewritePath
           regex: src/test/java/com/example/demo/controller(.*)
           rewriteTo: "'src/test/java/' + #pkgName.replace('.', '/') + '/' + #className+'Test.java'"
