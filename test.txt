@@ -1,7 +1,1 @@
-{
-  "className" : "GoodBar",
-  "componentType" : "controller",
-  "includeTest" : "yes",
-  "pkgName" : "com.acmecorp",
-  "projectName" : "test-accelerator"
-}
+{ "className": "NewController2", "componentType": "controller", "includeTest": "yes", "pkgName": "com.ellin2", "projectName": "test-accelerator" }
